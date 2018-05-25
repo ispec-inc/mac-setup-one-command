@@ -82,8 +82,11 @@ brew install wget
 wget --version
 
 
+###
+### next command
+###
 while true; do
-  read -p 'Now install Common apps? [Y/n]' Answer
+  read -p 'Now install Common Apps? [Y/n]' Answer
   case $Answer in
     '' | [Yy]* )
       $(cd $(dirname ${BASH_SOURCE:-$0}); pwd)/setup-common.sh
@@ -99,16 +102,53 @@ while true; do
 done;
 
 
+while true; do
+  read -p 'Now install Web Developer Apps? [Y/n]' Answer
+  case $Answer in
+    '' | [Yy]* )
+      $(cd $(dirname ${BASH_SOURCE:-$0}); pwd)/setup-web-dev.sh
+      break;
+      ;;
+    [Nn]* )
+      echo "Skip install"
+      break;
+      ;;
+    * )
+      echo Please answer YES or NO.
+  esac
+done;
 
 
+while true; do
+  read -p 'Now install Common apps? [Y/n]' Answer
+  case $Answer in
+    '' | [Yy]* )
+      $(cd $(dirname ${BASH_SOURCE:-$0}); pwd)/setup-go-dev.sh
+      break;
+      ;;
+    [Nn]* )
+      echo "Skip install"
+      break;
+      ;;
+    * )
+      echo Please answer YES or NO.
+  esac
+done;
 
 
-
-
-
-
-
-
-
-
+while true; do
+  read -p 'now install common apps? [y/n]' answer
+  case $answer in
+    '' | [yy]* )
+      $(cd $(dirname ${bash_source:-$0}); pwd)/setup-ios-dev.sh
+      break;
+      ;;
+    [nn]* )
+      echo "skip install"
+      break;
+      ;;
+    * )
+      echo please answer yes or no.
+  esac
+done;
 
