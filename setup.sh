@@ -89,7 +89,7 @@ while true; do
   read -p 'Now install Common Apps? [Y/n]' Answer
   case $Answer in
     '' | [Yy]* )
-      $(cd $(dirname ${BASH_SOURCE:-$0}); pwd)/setup-common.sh
+      $(cd $(dirname ${BASH_SOURCE:-$0}); pwd)/install-common.sh
       break;
       ;;
     [Nn]* )
@@ -106,7 +106,7 @@ while true; do
   read -p 'Now install Web Developer Apps? [Y/n]' Answer
   case $Answer in
     '' | [Yy]* )
-      $(cd $(dirname ${BASH_SOURCE:-$0}); pwd)/setup-web-dev.sh
+      $(cd $(dirname ${BASH_SOURCE:-$0}); pwd)/install-web-dev.sh
       break;
       ;;
     [Nn]* )
@@ -123,7 +123,7 @@ while true; do
   read -p 'now install iOS Developer apps? [y/n]' answer
   case $answer in
     '' | [yy]* )
-      $(cd $(dirname ${bash_source:-$0}); pwd)/setup-ios-dev.sh
+      $(cd $(dirname ${bash_source:-$0}); pwd)/install-ios-dev.sh
       break;
       ;;
     [nn]* )
@@ -140,7 +140,7 @@ while true; do
   read -p 'Now install Go Developer Apps? [Y/n]' Answer
   case $Answer in
     '' | [Yy]* )
-      $(cd $(dirname ${BASH_SOURCE:-$0}); pwd)/setup-go-dev.sh
+      $(cd $(dirname ${BASH_SOURCE:-$0}); pwd)/install-go-dev.sh
       break;
       ;;
     [Nn]* )
