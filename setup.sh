@@ -12,9 +12,9 @@ echo "---- git ----"
 brew install git
 git --version
 
-# ispec/mac-setup-one-command
+# ispec-inc/mac-setup-one-command
 echo "---- download setup files from github ----"
-git clone https://github.com/ispec/mac-setup-one-command.git
+git clone https://github.com/ispec-inc/mac-setup-one-command.git
 
 
 # change cask install dir

@@ -3,6 +3,6 @@
 
 ## Download&setup
 ```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ispec/mac-setup-one-command/master/download.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ispec-inc/mac-setup-one-command/master/download.sh)"
 ```
 
