@@ -43,6 +43,10 @@ chsh -s /usr/local/bin/zsh
 echo " ---- Vim ----"
 brew install vim --with-override-system-vi
 
+echo " ---- Powerline ----"
+git clone https://github.com/bhilburn/powerlevel9k.git ~/powerlevel9k
+git clone https://github.com/powerline/fonts.git ~/fonts
+~/fonts/install.sh
 
 # ruby 
 echo " ---- Ruby ----"
@@ -60,7 +64,6 @@ ruby -v
 # dotsfile
 echo " ---- dotfiles ----"
 sh -c "`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/install.sh`"
-cp $(cd $(dirname ${BASH_SOURCE:-$0}); pwd)/settings/zsh/private.zsh ~/.yadr/zsh/private.zsh
 source ~/.zshrc
 
 
