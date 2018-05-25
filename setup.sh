@@ -89,7 +89,7 @@ while true; do
   read -p 'Now install Common Apps? [Y/n]' Answer
   case $Answer in
     '' | [Yy]* )
-      $(cd $(dirname ${BASH_SOURCE:-$0}); pwd)/install-common.sh
+      $(cd $(dirname ${BASH_SOURCE:-$0}); pwd)/mac-setup-with-one-command/install-common.sh
       break;
       ;;
     [Nn]* )
@@ -106,7 +106,25 @@ while true; do
   read -p 'Now install Web Developer Apps? [Y/n]' Answer
   case $Answer in
     '' | [Yy]* )
-      $(cd $(dirname ${BASH_SOURCE:-$0}); pwd)/install-web-dev.sh
+      $(cd $(dirname ${BASH_SOURCE:-$0}); pwd)/mac-setup-with-one-command/install-web-dev.sh
+      break;
+      ;;
+    [Nn]* )
+      echo "Skip install"
+      break;
+      ;;
+    * )
+      echo Please answer YES or NO.
+  esac
+done;
+
+
+
+while true; do
+  read -p 'Now install iOS Developer Apps? [Y/n]' Answer
+  case $Answer in
+    '' | [Yy]* )
+      $(cd $(dirname ${BASH_SOURCE:-$0}); pwd)/mac-setup-with-one-command/install-ios-dev.sh
       break;
       ;;
     [Nn]* )
@@ -120,27 +138,10 @@ done;
 
 
 while true; do
-  read -p 'now install iOS Developer apps? [y/n]' answer
-  case $answer in
-    '' | [yy]* )
-      $(cd $(dirname ${bash_source:-$0}); pwd)/install-ios-dev.sh
-      break;
-      ;;
-    [nn]* )
-      echo "skip install"
-      break;
-      ;;
-    * )
-      echo please answer yes or no.
-  esac
-done;
-
-
-while true; do
   read -p 'Now install Go Developer Apps? [Y/n]' Answer
   case $Answer in
     '' | [Yy]* )
-      $(cd $(dirname ${BASH_SOURCE:-$0}); pwd)/install-go-dev.sh
+      $(cd $(dirname ${BASH_SOURCE:-$0}); pwd)/mac-setup-with-one-command/install-go-dev.sh
       break;
       ;;
     [Nn]* )
