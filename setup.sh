@@ -64,23 +64,12 @@ ruby -v
 # dotsfile
 echo " ---- dotfiles ----"
 sh -c "`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/install.sh`"
+cp ~/mac-setup-with-one-command/settings/zsh/private.zsh ~/.yadr/zsh/private.zsh
 source ~/.zshrc
-
-
-# node
-echo " ---- Node.js ----"
-curl -L git.io/nodebrew | perl - setup
-nodebrew ls-remote
-nodebrew install-binary latest
-nodebrew ls
-nodebrew use latest
-node -v
-npm -v
 
 # wget
 brew install wget
 wget --version
-
 
 ###
 ### next command
