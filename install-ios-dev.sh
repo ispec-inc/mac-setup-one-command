@@ -13,7 +13,11 @@ brew install carthage
 
 
 # Xvim2
-cd ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/
+sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+
+cd ~/Library/Developer/Xcode
+mkdir Plug-ins
+cd Plug-ins
 git clone git://github.com/XVimProject/XVim2 XVim2
 cd XVim2
 make
